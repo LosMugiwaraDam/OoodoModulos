@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_encuestas_cuestionario,encuestas.cuestionario,model_encuestas_cuestionario,base.group_user,1,1,1,1
+access_encuestas_pregunta,encuestas.pregunta,model_encuestas_pregunta,base.group_user,1,1,1,1
+access_encuestas_respuesta,encuestas.respuesta,model_encuestas_respuesta,base.group_user,1,1,1,1

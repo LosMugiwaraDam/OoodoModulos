@@ -1,0 +1,109 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+    <record model="ir.ui.view" id="tienda.ventas_list">
+      <field name="name">tienda ventas list</field>
+      <field name="model">gastos.entradas</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="fecha"/>
+          <field name="descripcion"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="tienda.compras_list">
+      <field name="name">tienda compras list</field>
+      <field name="model">gastos.salidas</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="fecha"/>
+          <field name="descripcion"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="tienda.productos_list">
+      <field name="name">tienda productos list</field>
+      <field name="model">inventario.productos</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="tipo_producto"/>
+          <field name="descripcion"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="tienda.clientes_list">
+      <field name="name">tienda clientes list</field>
+      <field name="model">res.partner</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <!--<field name="birth_year"/>
+          <field name="dni"/>-->
+        </tree>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+    <record model="ir.actions.act_window" id="tienda.action_ventas_window">
+      <field name="name">tienda ventas window</field>
+      <field name="res_model">gastos.entradas</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    <record model="ir.actions.act_window" id="tienda.action_compras_window">
+      <field name="name">tienda compras window</field>
+      <field name="res_model">gastos.salidas</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    <record model="ir.actions.act_window" id="tienda.action_productos_window">
+      <field name="name">tienda productos window</field>
+      <field name="res_model">inventario.productos</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    <record model="ir.actions.act_window" id="tienda.action_clientes_window">
+      <field name="name">tienda clientes window</field>
+      <field name="res_model">res.partner</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="tienda.action_server">
+      <field name="name">tienda server</field>
+      <field name="model_id" ref="model_tienda_tienda"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+    <menuitem name="tienda" id="tienda.menu_root"/>
+-->
+    <!-- menu categories -->
+    <menuitem name="Ventas" id="tienda.menu_1" parent="tienda.menu_root" action="tienda.action_ventas_window"/>
+    <menuitem name="Compras" id="tienda.menu_2" parent="tienda.menu_root" action="tienda.action_compras_window"/>
+    <menuitem name="Productos" id="tienda.menu_3" parent="tienda.menu_root" action="tienda.action_productos_window"/>
+    <menuitem name="Clientes" id="tienda.menu_4" parent="tienda.menu_root" action="tienda.action_clientes_window"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="tienda.menu_1_list" parent="tienda.menu_1"
+              action="tienda.action_window"/>
+    <menuitem name="Server to list" id="tienda" parent="tienda.menu_2"
+              action="tienda.action_server"/>
+-->
+  </data>
+</odoo>

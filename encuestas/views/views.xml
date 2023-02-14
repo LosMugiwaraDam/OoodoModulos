@@ -1,0 +1,172 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+    <record model="ir.ui.view" id="encuestas.cuestionario_list">
+      <field name="name">encuestas cuestionario list</field>
+      <field name="model">encuestas.cuestionario</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="tipo"/>
+          <field name="pregunta"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="encuestas.pregunta_list">
+      <field name="name">encuestas pregunta list</field>
+      <field name="model">encuestas.pregunta</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="text"/>
+          <field name="cuestionario"/>
+          <field name="respuesta"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="encuestas.respuesta_list">
+      <field name="name">encuestas respuesta list</field>
+      <field name="model">encuestas.respuesta</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="text"/>
+          <field name="pregunta"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="encuestas.cuestionario_form">
+      <field name="name">encuestas cuestionario form</field>
+      <field name="model">encuestas.cuestionario</field>
+      <field name="arch" type="xml">
+        <form>
+          <sheet>
+            <group>
+              <field name="name"/>
+              <field name="tipo"/>
+              <field name="pregunta"/>
+            </group>        
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="encuestas.pregunta_form">
+      <field name="name">encuestas pregunta form</field>
+      <field name="model">encuestas.pregunta</field>
+      <field name="arch" type="xml">
+        <form>
+          <sheet>
+            <group>
+              <field name="text"/>
+              <field name="cuestionario"/>
+              <field name="respuesta"/>
+              <field name="votos" widget="priority"/>
+            </group>        
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="encuestas.respuesta_form">
+      <field name="name">encuestas respuesta form</field>
+      <field name="model">encuestas.respuesta</field>
+      <field name="arch" type="xml">
+        <form>
+          <sheet>
+            <group>
+              <field name="text"/>
+              <field name="pregunta"/>
+              <field name="votos" widget="priority"/>
+            </group>        
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="encuestas.cuestionario_search">
+      <field name="name">encuestas cuestionario search</field>
+      <field name="model">encuestas.cuestionario</field>
+      <field name="arch" type="xml">
+        <search>
+          <field name="name"/>
+          <field name="tipo"/>
+          <field name="pregunta"/>
+        </search>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="encuestas.pregunta_search">
+      <field name="name">encuestas pregunta search</field>
+      <field name="model">encuestas.pregunta</field>
+      <field name="arch" type="xml">
+        <search>
+          <field name="text"/>
+          <field name="respuesta"/>
+        </search>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="encuestas.respuesta_search">
+      <field name="name">encuestas respuesta search</field>
+      <field name="model">encuestas.respuesta</field>
+      <field name="arch" type="xml">
+        <search>
+          <field name="text"/>
+        </search>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+    <record model="ir.actions.act_window" id="encuestas.action_cuestionario_window">
+      <field name="name">encuestas cuestionario window</field>
+      <field name="res_model">encuestas.cuestionario</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    <record model="ir.actions.act_window" id="encuestas.action_pregunta_window">
+      <field name="name">encuestas pregunta window</field>
+      <field name="res_model">encuestas.pregunta</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    <record model="ir.actions.act_window" id="encuestas.action_respuesta_window">
+      <field name="name">encuestas respuesta window</field>
+      <field name="res_model">encuestas.respuesta</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="encuestas.action_server">
+      <field name="name">encuestas server</field>
+      <field name="model_id" ref="model_encuestas_encuestas"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+    <menuitem name="encuestas" id="encuestas.menu_root"/>
+-->
+    <!-- menu categories -->
+    <menuitem name="cuestionario" id="encuestas.menu_1" parent="encuestas.menu_root" action="encuestas.action_cuestionario_window"/>
+    <menuitem name="preguntas" id="encuestas.menu_2" parent="encuestas.menu_root" action="encuestas.action_pregunta_window"/>
+    <menuitem name="respuestas" id="encuestas.menu_3" parent="encuestas.menu_root" action="encuestas.action_respuesta_window"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="encuestas.menu_1_list" parent="encuestas.menu_1"
+              action="encuestas.action_window"/>
+    <menuitem name="Server to list" id="encuestas" parent="encuestas.menu_2"
+              action="encuestas.action_server"/>
+-->
+  </data>
+</odoo>

@@ -1,0 +1,95 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+    <record model="ir.ui.view" id="sugerencias.idea_list">
+      <field name="name">sugerencias idea list</field>
+      <field name="model">sugerencias.idea</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="titulo" decoration-bf="4"/>
+          <field name="fecha_creacion"/>
+          <field name="descripcion"/>
+          <field name="tipo_idea"/>
+          <field name="votos"/><!--widget="rating"-->
+          <field name="empleado"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="sugerencias.empleado_list">
+      <field name="name">sugerencias empleado list</field>
+      <field name="model">empleados.empleado</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="puesto"/>
+          <field name="telefono"/>
+          <field name="correo"/>
+          <field name="departamento"/>
+          <field name="apellidos"/><!--
+          <field name="fechanacimiento"/>
+          <field name="lugarnacimiento"/>
+          <field name="direccion"/>
+          <field name="idioma"/>
+          <field name="Estadocivil"/>
+          <field name="nivelcertificado"/>
+          <field name="campoestudio"/>
+          <field name="escuela"/>
+          <field name="nacionalidad"/>
+          <field name="genero"/>
+          <field name="nhijos"/>
+          <field name="imagen"/>
+          <field name="idea"/>
+          widget="priority"-->
+        </tree>
+      </field>
+    </record>
+    
+-->
+
+    <!-- actions opening views on models -->
+    <record model="ir.actions.act_window" id="sugerencias.action_idea_window">
+      <field name="name">sugerencias idea window</field>
+      <field name="res_model">sugerencias.idea</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record model="ir.actions.act_window" id="sugerencias.action_empleado_window">
+      <field name="name">sugerencias empleado window</field>
+      <field name="res_model">empleados.empleado</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="sugerencias.action_server">
+      <field name="name">sugerencias server</field>
+      <field name="model_id" ref="model_sugerencias_sugerencias"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+    <menuitem name="sugerencias" id="sugerencias.menu_root"/>
+-->
+    <!-- menu categories -->
+    <menuitem name="ideas" id="sugerencias.menu_1" parent="sugerencias.menu_root" action="sugerencias.action_idea_window"/>
+    <menuitem name="empleados" id="sugerencias.menu_2" parent="sugerencias.menu_root" action="empleados.action_empleado_window"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="sugerencias.menu_1_list" parent="sugerencias.menu_1"
+              action="sugerencias.action_window"/>
+    <menuitem name="Server to list" id="sugerencias" parent="sugerencias.menu_2"
+              action="sugerencias.action_server"/>
+-->
+  </data>
+</odoo>

@@ -1,0 +1,62 @@
+<odoo>
+<data>
+    <report
+        id="empleados.web_empleado"
+        model="empleados.empleado"
+        string="Informe empleado"
+        name="empleados.web_empleado_view"
+        file="empleados.web_empleado_view"
+        report_type="qweb-pdf"/>
+    <template id="web_empleado_view">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="empleado">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <h2 t-field="empleado.name"/>
+                        <div> 
+                            <strong>apellidos:</strong>
+                            <span t-field='empleado.apellidos'/>
+                        </div>
+                        <div>
+                            <strong>fechanacimiento:</strong>
+                            <span t-field='empleado.fechanacimiento'/>
+                        </div>
+                        <div>
+                            <strong>lugarnacimiento:</strong>
+                            <span t-field='empleado.lugarnacimiento'/>
+                        </div>
+                        <div>
+                            <strong>puesto:</strong>
+                            <span t-field='empleado.puesto'/>
+                        </div>
+                        <div>
+                            <strong>telefono:</strong>
+                            <span t-field='empleado.telefono'/>
+                        </div>
+                        <div>
+                            <strong>correo:</strong>
+                            <span t-field='empleado.correo'/>
+                        </div>
+                        <div>
+                            <strong>direccion:</strong>
+                            <span t-field='empleado.direccion'/>
+                        </div>
+                        <div>
+                            <strong>dni:</strong>
+                            <span t-field='empleado.dni'/>
+                        </div>
+                        <div>
+                            <strong>idioma:</strong>
+                            <span t-field='empleado.idioma'/>
+                        </div>
+                        <div>
+                            <strong>Estadocivil:</strong>
+                            <span t-field='empleado.Estadocivil'/>
+                        </div>
+                    </div>
+                </t>
+            </t> 
+        </t>
+    </template>
+</data>
+</odoo>

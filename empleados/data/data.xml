@@ -1,0 +1,82 @@
+<odoo>
+    <data>
+        <record model="empleados.empleado">
+            <field name="name">Andoni</field>
+            <field name="apellidos">Bustamante</field>
+            <field name="lugarnacimiento">Barakaldo</field>
+            <field name="puesto">Barra</field>
+            <field name="correo">Andoni@gmail.com</field>
+            <field name="direccion">Avenida Barakaldo 1ºD</field>
+            <field name="campoestudio">Infor</field>
+            <field name="escuela">Baraka</field>
+            <field name="nacionalidad">Español</field>
+            <field name="nhijos">0</field>
+            <field name="ingresos_anuales">30000</field>
+        </record>
+        <record model="empleados.empleado">
+            <field name="name">Asier</field>
+            <field name="apellidos">Aparicio</field>
+            <field name="lugarnacimiento">Portugalete</field>
+            <field name="puesto">Cocina</field>
+            <field name="correo">Asier@gmail.com</field>
+            <field name="direccion">Avenida Buenavista 1ºD</field>
+            <field name="campoestudio">Infor</field>
+            <field name="escuela">Portu</field>
+            <field name="nacionalidad">Español</field>
+            <field name="nhijos">0</field>
+            <field name="ingresos_anuales">30000</field>
+        </record>
+        <record model="empleados.empleado">
+            <field name="name">Iker</field>
+            <field name="apellidos">Murga</field>
+            <field name="lugarnacimiento">Santurtzi</field>
+            <field name="puesto">Cocina</field>
+            <field name="correo">Iker@gmail.com</field>
+            <field name="direccion">Avenida Santur 1ºD</field>
+            <field name="campoestudio">Infor</field>
+            <field name="escuela">Santur</field>
+            <field name="nacionalidad">Español</field>
+            <field name="nhijos">0</field>
+            <field name="ingresos_anuales">30000</field>
+        </record>
+        <record model="empleados.empleado">
+            <field name="name">Ander</field>
+            <field name="apellidos">Lopez</field>
+            <field name="lugarnacimiento">Portugalete</field>
+            <field name="puesto">Barra</field>
+            <field name="correo">Ander@gmail.com</field>
+            <field name="direccion">Avenida Buenavista 1ºD</field>
+            <field name="campoestudio">Infor</field>
+            <field name="escuela">Portu</field>
+            <field name="nacionalidad">Español</field>
+            <field name="nhijos">0</field>
+            <field name="ingresos_anuales">30000</field>
+        </record>
+        <record model="empleados.empleado">
+            <field name="name">Luken</field>
+            <field name="apellidos">Alava</field>
+            <field name="lugarnacimiento">Portugalete</field>
+            <field name="puesto">Cocina</field>
+            <field name="correo">Luken@gmail.com</field>
+            <field name="direccion">Avenida Peñota 1ºD</field>
+            <field name="campoestudio">Infor</field>
+            <field name="escuela">Portu</field>
+            <field name="nacionalidad">Español</field>
+            <field name="nhijos">0</field>
+            <field name="ingresos_anuales">30000</field>
+        </record>
+        <record model="empleados.empleado">
+            <field name="name">Jie</field>
+            <field name="apellidos">Zang</field>
+            <field name="lugarnacimiento">Barakaldo</field>
+            <field name="puesto">Cocina</field>
+            <field name="correo">Jie@gmail.com</field>
+            <field name="direccion">Avenida Baraka 1ºD</field>
+            <field name="campoestudio">Infor</field>
+            <field name="escuela">Portu</field>
+            <field name="nacionalidad">Español</field>
+            <field name="nhijos">0</field>
+            <field name="ingresos_anuales">30000</field>
+        </record>
+    </data>
+</odoo>
